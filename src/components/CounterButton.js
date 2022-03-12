@@ -10,10 +10,12 @@ export class CounterButton extends Component {
 			this.setState({
 				counter: this.state.counter + 1,
 			})
-		} else {
-			this.setState({
-				counter: this.state.counter - 1,
-			})
+		}
+
+		if (operation === '-') {
+			this.setState(({ counter }) => ({
+				counter: --counter,
+			}))
 		}
 	}
 
