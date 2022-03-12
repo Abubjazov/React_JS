@@ -1,23 +1,14 @@
 import { Component } from 'react'
 
-export class CounterButtonOld extends Component {
-	constructor(props) {
-		super(props)
-
-		this.state = {
-			counter: 0,
-		}
-
-		this.handleClick = this.handleClick.bind(this)
-	}
-
-	handleClick() {}
-}
-
-export class CounterButtonNew extends Component {
+export class CounterButton extends Component {
 	state = {
 		counter: 0,
 	}
 
 	handleClick = () => {}
+
+	render() {
+		const { counter } = this.state
+		return <div>{counter}</div>
+	}
 }

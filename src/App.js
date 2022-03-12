@@ -1,4 +1,7 @@
 import { Component } from 'react'
+
+import { CounterButton } from './components/CounterButton'
+
 import './App.css'
 
 export const App = () => {
@@ -7,6 +10,10 @@ export const App = () => {
 
 export class AppClass extends Component {
 	render() {
-		return <div className='App'>Class App</div>
+		return (
+			<div className='App'>
+				<CounterButton />
+			</div>
+		)
 	}
 }
