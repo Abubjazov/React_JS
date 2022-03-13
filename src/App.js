@@ -1,6 +1,7 @@
 import { Component } from 'react'
 
 import { CounterButton } from './components/CounterButton'
+import { Counter } from './components/Counter'
 
 import './App.css'
 
@@ -12,7 +13,9 @@ export class AppClass extends Component {
 	render() {
 		return (
 			<div className='App'>
-				<CounterButton />
+				<CounterButton>
+					<Counter />
+				</CounterButton>
 			</div>
 		)
 	}

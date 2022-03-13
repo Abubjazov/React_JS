@@ -1,8 +1,15 @@
-import { Component } from 'react'
-
-import { Counter } from './Counter'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 export class CounterButton extends Component {
+	static propTypes = {
+		children: PropTypes.element,
+	}
+
+	static defaultTypes = {
+		children: null,
+	}
+
 	state = {
 		counter: 0,
 	}
@@ -23,9 +30,11 @@ export class CounterButton extends Component {
 
 	render() {
 		const { counter } = this.state
+		const { children } = this.props
+
 		return (
 			<>
-				<Counter value={counter} />
+				{React.cloneElement(children, { value: counter })}
 				<button onClick={() => this.handleClick('+')}> + </button>
 				<button onClick={() => this.handleClick('-')}> - </button>
 			</>
