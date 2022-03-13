@@ -30,10 +30,11 @@ export class CounterButton extends Component {
 
 	render() {
 		const { counter } = this.state
-		const { children } = this.props
+		const { children, child } = this.props
 
 		return (
 			<>
+				{child}
 				{React.cloneElement(children, { value: counter })}
 				<button onClick={() => this.handleClick('+')}> + </button>
 				<button onClick={() => this.handleClick('-')}> - </button>
