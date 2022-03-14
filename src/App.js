@@ -28,7 +28,7 @@ export class AppClass extends Component {
 				<CounterButton child={<Button />}>
 					<Counter />
 				</CounterButton>
-				<MyLink onClick={this.handleClick} />
+				<MyLink onClick={e => this.handleClick(e, 'data')} />
 			</div>
 		)
 	}
