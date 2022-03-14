@@ -12,6 +12,10 @@ export const App = () => {
 	return <div className='App'>Func App</div>
 }
 
+const Tab1 = () => <h1>Text of Tab1</h1>
+const Tab2 = () => <h1>Text of Tab2</h1>
+const Tab3 = () => <h1>Text of Tab3</h1>
+
 export class AppClass extends Component {
 	state = {
 		activeTab: 1,
@@ -37,6 +41,7 @@ export class AppClass extends Component {
 
 	render() {
 		const val = null
+		const { activeTab } = this.state
 
 		console.log(this.state.activeTab)
 
@@ -53,6 +58,9 @@ export class AppClass extends Component {
 					<Button name={1} text={'Tab 1'} onClick={this.handleTab} />
 					<Button name={2} text={'Tab 2'} onClick={this.handleTab} />
 					<Button name={3} text={'Tab 3'} onClick={this.handleTab} />
+					{activeTab === 1 && <Tab1 />}
+					{activeTab === 2 && <Tab2 />}
+					{activeTab === 3 && <Tab3 />}
 				</div>
 			</div>
 		)
