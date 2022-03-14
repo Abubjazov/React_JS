@@ -6,6 +6,7 @@ import { Button } from './components/Button'
 
 import './App.css'
 import { MyLink } from './components/MyLink'
+import { ValidationMsg } from './components/ValidationMsg'
 
 export const App = () => {
 	return <div className='App'>Func App</div>
@@ -28,7 +29,8 @@ export class AppClass extends Component {
 				<CounterButton child={<Button />}>
 					<Counter />
 				</CounterButton>
-				<MyLink onClick={e => this.handleClick(e, 'data')} />
+				<MyLink onClick={this.handleClick} />
+				<ValidationMsg val={11} />
 			</div>
 		)
 	}
