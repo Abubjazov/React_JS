@@ -24,6 +24,8 @@ export class AppClass extends Component {
 	}
 
 	render() {
+		const val = null
+
 		return (
 			<div className='App' onClick={this.handleClick2}>
 				<CounterButton child={<Button />}>
@@ -31,6 +33,8 @@ export class AppClass extends Component {
 				</CounterButton>
 				<MyLink onClick={this.handleClick} />
 				<ValidationMsg val={11} />
+				{val != null ? <h2>Heder One</h2> : <h2>Heder Two</h2>}
+				{val && <h2>Heder Three</h2>}
 			</div>
 		)
 	}
