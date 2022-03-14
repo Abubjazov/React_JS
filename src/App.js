@@ -12,13 +12,23 @@ export const App = () => {
 }
 
 export class AppClass extends Component {
+	handleClick = e => {
+		e.preventDefault()
+		e.stopPropagation()
+		console.log('Clicked on link')
+	}
+
+	handleClick2 = e => {
+		console.log('Clicked on div')
+	}
+
 	render() {
 		return (
-			<div className='App'>
+			<div className='App' onClick={this.handleClick2}>
 				<CounterButton child={<Button />}>
 					<Counter />
 				</CounterButton>
-				<MyLink />
+				<MyLink onClick={this.handleClick} />
 			</div>
 		)
 	}
