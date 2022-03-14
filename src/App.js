@@ -5,6 +5,7 @@ import { Counter } from './components/Counter'
 import { Button } from './components/Button'
 
 import './App.css'
+import { MyLink } from './components/MyLink'
 
 export const App = () => {
 	return <div className='App'>Func App</div>
@@ -17,6 +18,7 @@ export class AppClass extends Component {
 				<CounterButton child={<Button />}>
 					<Counter />
 				</CounterButton>
+				<MyLink />
 			</div>
 		)
 	}
